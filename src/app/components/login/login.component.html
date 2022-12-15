@@ -1,0 +1,25 @@
+<div class='box'>
+    <div class='wave -one'></div>
+    <div class='wave -two'></div>
+    <div class='wave -three'></div>
+</div>
+
+
+<div class="wrapper">
+    <div *ngIf="!loading" class="body">
+        <img class="logo-login" src="../../../assets/img/iniciar-sesion.png" alt="">
+        <h1>Inicio de Sesion</h1>
+
+        <div class="form-floating mb-3">
+            <input type="email" [(ngModel)]="username" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Usuario o Email</label>
+        </div>
+        <div class="form-floating">
+            <input type="password" [(ngModel)]="password" class="form-control" placeholder="Ingrese su Contraseña">
+            <label>Contraseña</label>
+        </div>
+        <button type="button" class="btn btn-light " (click)="login()">Iniciar Sesion</button>
+        <p>¿Deseas registrarte? <a routerLink="/signIn">Registrar</a></p>
+    </div>
+    <app-spinner *ngIf="loading"></app-spinner>
+</div>

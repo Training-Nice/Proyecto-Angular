@@ -1,0 +1,47 @@
+<div class='box'>
+    <div class='wave -one'></div>
+    <div class='wave -two'></div>
+    <div class='wave -three'></div>
+</div>
+
+
+<div class="wrapper">
+    <div *ngIf="!loading" class="body">
+        <!-- <img class="logo-login" src="../../../assets/img/iniciar-sesion.png" alt=""> -->
+        <h1>Registrar Usuario</h1>
+
+        <div class="form-floating mb-3">
+            <input type="text"      [(ngModel)]="username" class="form-control" id="floatingInput" placeholder="nombre + primera letra del apellido paterno">
+            <label for="floatingInput">Usuario</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="password"  [(ngModel)]="password" class="form-control" id="floatingInput" placeholder="Tiene que contenter al menos una mayuscula y numeros">
+            <label for="floatingInput">Ingrese contraseña</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="password"  [(ngModel)]="confirmPassword" class="form-control" id="floatingInput" placeholder="Tiene que contenter al menos una mayuscula y numeros">
+            <label for="floatingInput">Ingrese de nuevo la contraseña</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="text"      [(ngModel)]="nombre" class="form-control" id="floatingInput" placeholder="Pepe">
+            <label for="floatingInput">Nombre</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="text"      [(ngModel)]="apellido_paterno" class="form-control" id="floatingInput" placeholder="Pepe">
+            <label for="floatingInput">Apelido Paterno</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="text"      [(ngModel)]="apellido_materno" class="form-control" id="floatingInput" placeholder="Pepe">
+            <label for="floatingInput">Apelido Materno</label>
+        </div>
+
+
+        <div class=" gap-2">
+            <button type="button" (click)="addUser()" class="btn btn-light " >Registrar</button>
+            <button type="button" class="btn btn-secondary mx-3" routerLink="/login">Volver</button>
+        </div>
+        
+        
+    </div>
+    <app-spinner *ngIf="loading"></app-spinner>
+</div>
