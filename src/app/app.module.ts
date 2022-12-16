@@ -17,10 +17,20 @@ import { SignInComponent } from './components/sign-in/sign-in.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SpinnerComponent } from './shared/spinner/spinner.component';
-import { AdminComponent } from './components/admin/admin.component';
-import { CopropietarioComponent } from './components/copropietario/copropietario.component';
+
+
 import { CondominioComponent } from './components/condominio/condominio.component';
-import { HomeComponent } from './components/home/home.component';
+import { HomeComponent } from './pages/home/home.component';
+import { CopropietarioTableComponent } from './components/copropietario-table/copropietario-table.component';
+import { CopropietarioHomePageComponent } from './pages/copropietario/copropietario-home-page/copropietario-home-page.component';
+import { AdminHomePageComponent } from './pages/administrador/admin-home-page/admin-home-page.component';
+import { CopropietarioGeneralComponent } from './pages/administrador/copropietario-general/copropietario-general.component';
+import { EstadoCuentasComponent } from './pages/copropietario/estado-cuentas/estado-cuentas.component';
+import { ModaldeudasComponent } from './components/deudas/modaldeudas/modaldeudas.component';
+import { ModalexpensasComponent } from './components/expensas/modalexpensas/modalexpensas.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ModalEdithComponent } from './components/deudas/modal-edith/modal-edith.component';
+
 
 @NgModule({
   declarations: [
@@ -30,10 +40,17 @@ import { HomeComponent } from './components/home/home.component';
     DashboardComponent,
     NavbarComponent,
     SpinnerComponent,
-    AdminComponent,
-    CopropietarioComponent,
     CondominioComponent,
-    HomeComponent
+    HomeComponent,
+    CopropietarioTableComponent,
+    CopropietarioHomePageComponent,
+    AdminHomePageComponent,
+    CopropietarioGeneralComponent,
+    EstadoCuentasComponent,
+    ModaldeudasComponent,
+    ModalexpensasComponent,
+    ModalEdithComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -45,7 +62,7 @@ import { HomeComponent } from './components/home/home.component';
       timeOut: 4000,
       positionClass: 'toast-bottom-right',
       preventDuplicates: true,
-    }) // ToastrModule added
+    }), NgbModule // ToastrModule added
   ],
   providers: [],
   bootstrap: [AppComponent]

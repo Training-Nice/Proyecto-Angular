@@ -9,9 +9,16 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" >Inicio</a>
+
+
+
+            <li *ngIf="isAdmin()" class="nav-item">
+                <a class="nav-link" aria-current="page" routerLink="/admin">Inicio</a>
             </li>
+            <li *ngIf="isCopropopietario()" class="nav-item" routerLink="/copropietario">
+                <a class="nav-link" aria-current="page" routerLink="/admin">Inicio</a>
+            </li>
+
 
 
             <li *ngIf="isAdmin()" class="nav-item">
@@ -20,7 +27,7 @@
 
 
             <li *ngIf="isAdmin()" class="nav-item">
-                <a class="nav-link" routerLink="/copropietario">Copropietarios</a>
+                <a class="nav-link" routerLink="/copropietarioDetails">Copropietarios</a>
             </li>
             
             <li *ngIf="isCopropopietario()" class="nav-item">
@@ -29,7 +36,7 @@
         </ul>
         <form class="part-end d-flex">
             
-            <button class="btn btn-danger " (click)="logOut()" type="button">Cerrar Sesion</button>
+            <button class="btn btn-danger " (click)="logOut()" type="button">Cerrar Sesión</button>
         </form>
         </div>
     </div>

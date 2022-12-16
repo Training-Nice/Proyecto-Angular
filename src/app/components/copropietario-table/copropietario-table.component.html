@@ -1,0 +1,38 @@
+
+
+<div class="body-listcopropietario">
+    <div  *ngIf="!loading" class="container-table-copropietarios tableFixHead">
+        <table class="table table-striped">
+            <thead class="container-title">
+                <tr>
+                    <th>#</th>
+                    <th>Nombre</th>
+                    <th>Apellidos</th>
+                    <th *ngIf="moreinf">Edificio</th>
+                    <th *ngIf="moreinf">Condominio</th>
+                    <th>Total de deudas</th>
+                    <th>Total de expensas</th>
+                    <th>Más detalles</th>
+                </tr> 
+            </thead>
+            <tbody>
+                    <tr *ngFor="let copropietario of listCopropietarios; let i = index">
+                        <td>{{i+1}}</td>
+                        <td>{{copropietario.nombre}}</td>
+                        <td>{{copropietario.apellido_paterno}}</td>
+                        <td *ngIf="moreinf">{{copropietario.nombreEdif}}</td>
+                        <td *ngIf="moreinf">{{copropietario.nombreCondominio}}</td>
+                        <td>{{copropietario.totalDeudas}}</td>
+                        <td>{{copropietario.totalDeudasExpensa}}</td>
+                        <td> 
+                            <div class="container-btn-row">
+                                    <app-modaldeudas   [idUser]="copropietario.idUser"></app-modaldeudas>
+                                    <app-modalexpensas [idUser]="copropietario.idUser"></app-modalexpensas>
+                            </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+    </div>
+    <app-spinner *ngIf="loading"></app-spinner>
+</div>

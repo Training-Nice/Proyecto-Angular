@@ -1,0 +1,83 @@
+tr{
+    text-align: center;
+}
+
+.container-btn-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.body-listcopropietario{
+    text-align: center;
+    padding: 5%;
+}
+
+
+/* Buttons */
+button{
+    background-color: #07AEA6;
+    border-radius: 20px;
+    border: 0;
+    color: white;
+    font-weight: bold;
+    margin-left: 10px;
+    padding: 8px 8px;
+}
+button:hover{
+    background-color: #0c7979;
+}
+
+
+
+/*Ajustar colores headers de la tabla*/
+
+
+.container-table-copropietarios{
+    border-radius: 20px 0px 20px 20px;
+    border-style: ridge;
+    border: 10px;
+    height: 80vh;
+    margin: auto;
+    width: 90%;
+} 
+.tableFixHead{ 
+    overflow: auto; 
+}
+
+.tableFixHead::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+}
+
+.tableFixHead::-webkit-scrollbar-track {
+background: rgb(255, 255, 255);        /* color of the tracking area */
+}
+
+.tableFixHead::-webkit-scrollbar-thumb {
+    background-color: rgb(176, 176, 176);    /* color of the scroll thumb */
+    border-radius: 20px;      /* roundness of the scroll thumb */
+
+}
+
+.tableFixHead thead th { 
+    position: sticky; 
+    top: 0; z-index: 1; 
+}
+
+/* Just common table stuff. Really. */
+table  { 
+    border-collapse: collapse; 
+    width: 100%; 
+    
+}
+.container-title tr,.container-title th{ 
+    background-color: rgb(176, 176, 176);
+    
+}
+th, td { 
+    padding: 8px 16px; 
+}
+tr{
+    text-align: center;
+}

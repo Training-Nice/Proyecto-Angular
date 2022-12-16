@@ -1,0 +1,20 @@
+/* Buttons */
+.btn-principal-modal-deuda button{
+    background-color: #07AEA6;
+    border-radius: 20px;
+    border: 0;
+    color: white;
+    font-weight: bold;
+    margin: 0;
+    padding: 8px 8px;
+}
+.btn-principal-modal-deuda button:hover{
+    background-color: #0c7979;
+}
+.container-btn-row i{
+    margin: 5px;
+}
+.container-btn-row button{
+    border: 0;
+    background-color: transparent;
+}

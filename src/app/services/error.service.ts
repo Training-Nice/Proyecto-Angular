@@ -11,6 +11,7 @@ export class ErrorService {
 
 
   msjError(e: HttpErrorResponse){
+    //corregir error TIMEOUT
     if(e.error.msg && e.error.statusText!='Not Found'){
       console.log(e);
       this.toastr.error(e.error.msg , 'Error');
