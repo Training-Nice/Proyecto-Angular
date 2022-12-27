@@ -18,8 +18,12 @@ pipeline{
                 // dir('/src')
                 // {
                 // }
-                sh 'npm install'
+                //sh 'npm install'
 
+                bat 'npm install'
+                dir('/src'){
+                // some block
+                }
             }
             
         }
