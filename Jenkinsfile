@@ -15,6 +15,10 @@ pipeline{
             {
                 git 'https://github.com/Training-Nice/Proyecto-Angular.git'
             }
+            steps
+            {
+                sh 'npm install'
+            }
         }
     }
 }
