@@ -15,10 +15,9 @@ pipeline{
             {
                 git 'https://github.com/Training-Nice/Proyecto-Angular.git'
 
-                dir('/src')
-                {
-                // some block
-                }
+                // dir('/src')
+                // {
+                // }
                 sh 'npm install'
 
             }
