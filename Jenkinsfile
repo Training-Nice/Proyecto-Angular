@@ -19,6 +19,7 @@ pipeline{
                 {
                 // some block
                 }
+                sh 'npm install'
 
             }
             
