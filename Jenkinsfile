@@ -10,15 +10,17 @@ pipeline{
     }
     stages{
         stage('install')
-        steps
         {
-            git 'https://github.com/Training-Nice/Proyecto-Angular.git'
-            //sh 'npm install'
-            dir('/src')
-            {
-                
-            // some block
-            }
+          steps
+          {
+              git 'https://github.com/Training-Nice/Proyecto-Angular.git'
+              //sh 'npm install'
+              dir('/src')
+              {
+
+              // some block
+              }
+          }
         }
     }
 }
